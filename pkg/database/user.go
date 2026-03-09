@@ -115,6 +115,7 @@ SELECT id, user_id, parent_id, created_at FROM up;`, userID)
 	return users, nil
 }
 
+// 查找所有上级的ID
 func (d *UserReferDAO) ListAllUpperIDs(userID int64) ([]int64, error) {
 	rows, err := d.db.Query(`
 WITH RECURSIVE up AS (

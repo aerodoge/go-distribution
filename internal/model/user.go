@@ -6,10 +6,12 @@ import (
 
 // 数据库结构
 type UserRefer struct {
-	ID        int64     `db:"id"`
-	UserID    int64     `db:"user_id"`
-	ParentID  int64     `db:"parent_id"`
-	CreatedAt time.Time `db:"created_at"`
+	ID         int64     `db:"id"`
+	UserID     int64     `db:"user_id"`
+	ParentID   int64     `db:"parent_id"`
+	Level      int       `db:"level"`
+	ProfitRate float64   `db:"profit_rate"`
+	CreatedAt  time.Time `db:"created_at"`
 }
 
 // 树形结构
